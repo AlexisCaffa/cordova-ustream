@@ -5,7 +5,7 @@ var viewer = {},
         initialize: function() {
             this.bindEvents();
 
-            if (!window.cordova) {  // Is debuggin?
+            if (!window.cordova) {  // Is debugging?
                 window.device = 'BROWSER';
                 app.initializeUstreamApi();
             } else {
