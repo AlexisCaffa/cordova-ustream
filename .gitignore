@@ -1,8 +1,8 @@
 .idea
 *.directory
+cordova
 platforms
 plugins
-cordova
 
 
 ### Android template
