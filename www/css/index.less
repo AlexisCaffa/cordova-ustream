@@ -1,0 +1,111 @@
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0;
+    padding:0;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    text-align:center;
+    padding: 5%;
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+    }
+}
+
+h1 {
+    background-color:#333333;
+    border-radius:4px;
+    color:#FFFFFF;
+    font-size:24px;
+    font-weight:normal;
+    margin: 0 0 15px 0;
+    overflow:visible;
+    padding: 5px 0;
+    text-align:center;
+    -webkit-border-radius:4px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.btn {
+    @primary-color: #428bca;
+
+    position: relative;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: top;
+    cursor: pointer;
+    border-radius: 3px;
+
+    color: #fff;
+    background-color: @primary-color;
+    border: 1px solid @primary-color;
+
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+
+    &:active,
+    &.active {
+        color: #fff;
+        background-color: darken(@primary-color, 10%);
+        border: 1px solid darken(@primary-color, 10%);
+    }
+
+    &:disabled,
+    &.disabled {
+        opacity: .6;
+    }
+}
+
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}

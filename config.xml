@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.alexiscaffa.ustream" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Cordova Ustream.tv</name>
+    <description>
+        A sample Apache Cordova application that plays Ustream.tv
+    </description>
+    <author href="https://github.com/AlexisCaffa">
+        Alexis Caffa
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
